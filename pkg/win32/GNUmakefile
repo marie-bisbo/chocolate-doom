@@ -37,9 +37,9 @@ hook-strife: staging-strife
 
 staging-%:
 	mkdir $@
-	LC_ALL=C ./cp-with-libs --ldflags="$(LDFLAGS)" --dll_path="$(MSYSTEM_PREFIX)/bin" \
+	LC_ALL=C ./cp-with-libs --ldflags="$(LDFLAGS)" --dll_path="../../../../../mingw64/bin/" \
 	               $(TOPLEVEL)/src/$(PROGRAM_PREFIX)$*.exe $@
-	LC_ALL=C ./cp-with-libs --ldflags="$(LDFLAGS)" --dll_path="$(MSYSTEM_PREFIX)/bin" \
+	LC_ALL=C ./cp-with-libs --ldflags="$(LDFLAGS)" --dll_path="../../../../../mingw64/bin/" \
 	               $(TOPLEVEL)/src/$(PROGRAM_PREFIX)setup.exe \
 	               $@/$(PROGRAM_PREFIX)$*-setup.exe
 
